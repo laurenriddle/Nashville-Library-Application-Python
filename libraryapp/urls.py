@@ -15,5 +15,6 @@ urlpatterns = [
     path('libraries/<int:library_id>/', library_details, name='library'),
     path('librarians/<int:librarian_id>/', librarian_details, name='librarian'),
     path('books/<int:book_id>/form/', book_edit_form, name='book_edit_form'),
+    # path('libraries/<int:library_id>/form/', library_edit_form, name='library_edit_form'),
 
 ]

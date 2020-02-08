@@ -60,25 +60,28 @@ body {
 
 }
 
-#site-nav {
-    background-color: #5a5560;
-    
-}
-.navList__route a{
-
-    color:#FAED26;
-    text-decoration: none;
-
-}
 
 .add-book {
     color:#9b786f;
     text-decoration: none;
-
-
 }
 
 .add-book:hover {
     color:#46344E;
 
+}
+
+.infoDialog {
+    background-color: #46344E;
+    color: white;
+    font-family: 'Courier Prime', monospace;
+
+}
+
+.closeDialog {
+    background-color: #5a5560;
+    color: white;
+    font-size: medium;
+    font-family: 'Courier Prime', monospace;
+    border-radius: 10px; 
 }

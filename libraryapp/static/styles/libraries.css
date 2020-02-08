@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Courier+Prime|Roboto:700&display=swap');
+.library-title {
+    color:#9b786f;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+}
+
+.add-library {
+    color:#9b786f;
+    text-decoration: none;
+}
+
+.add-library:hover {
+    color:#46344E;
+
+}
+.welcome-message {
+    color:#9b786f;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.book-img-container {
+    text-align: center;
+    display: block;
+
+}

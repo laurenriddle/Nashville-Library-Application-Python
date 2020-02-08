@@ -1,9 +1,13 @@
 {% extends 'shared/base.html' %}
+{% load static %}
 
+{% block css %}
+    <link rel="stylesheet" href="{% static 'styles/libraries.css' %}" />
+{% endblock %}
 {% block content %}
-    <h1>Libraries</h1>
+    <h1 class="library-title">Libraries</h1><hr/>
 
-    <a href="{% url 'libraryapp:library_form' %}">Add Library</a>
+    <a href="{% url 'libraryapp:library_form' %}" class="add-library">Add Library</a>
 
     <ol>
     {% for library in all_libraries %}

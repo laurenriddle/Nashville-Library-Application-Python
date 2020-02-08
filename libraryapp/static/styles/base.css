@@ -15,8 +15,21 @@ body {
     border: 1px solid lightgray;
     padding: 1em;
     margin: 0;
+    background-color: #605d63bd;
 }
 
 .navList__route {
     margin: 0 0.5em;
+}
+
+
+#site-nav {
+    background-color: #605d63bd;
+    
+}
+.navList__route a{
+    color:#FAED26;
+    text-decoration: none;
+
+
 }

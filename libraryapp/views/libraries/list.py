@@ -71,7 +71,7 @@ def library_list(request):
             print("PLEASE", library_groups)
             template = 'libraries/list.html'
             context = {
-                'all_libraries': library_groups
+                'all_libraries': library_groups.values()
             }
 
 

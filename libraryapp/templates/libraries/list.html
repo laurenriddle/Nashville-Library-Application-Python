@@ -4,12 +4,12 @@
     <h1>Libraries</h1>
 
     <a href="{% url 'libraryapp:library_form' %}">Add Library</a>
-    <p>{{all_libraries}}</p>
+
     <ol>
     {% for library in all_libraries %}
         <li>
-            {% comment %} <a href="{% url 'libraryapp:library' library.id %}"> {% endcomment %}
-                {{ library }}
+            <a href="{% url 'libraryapp:library' library.id %}">
+                {{ library.title }}
             </a>
             ({{ library.address }})
             <ul>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Courier+Prime&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Courier+Prime|Roboto:700&display=swap');
 .books {
     list-style: none;
     display: flex;
@@ -11,12 +13,72 @@
     border: 1px solid gray;
     margin: 1em;
     padding: 1.5em;
+    background-color: #46344E;
+    /* color: #FAED26; */
+    border-radius: 20px;
+    color: white;
 }
 
 .book__title {
     font-size: 1.1em;
+    color:#FAED26;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+}
+
+.book__title:hover {
+    font-size: 1.1em;
+    color:rgba(250, 236, 38, 0.836);
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
 }
 
 .book__description {
     font-size: 0.75em;
+    font-family: 'Courier Prime', monospace;
+
+}
+.book > button {
+    /* background-color: #9b786f; */
+    background-color: #5a5560;
+    color: white;
+    /* width: 30%; */
+    /* height: 20%; */
+    font-size: medium;
+    font-family: 'Courier Prime', monospace;
+    border-radius: 10px;
+}
+
+.books-title {
+    color:#9b786f;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+}
+body {
+    background-color: rgba(241, 241, 241, 0.76);
+
+}
+
+#site-nav {
+    background-color: #5a5560;
+    
+}
+.navList__route a{
+
+    color:#FAED26;
+    text-decoration: none;
+
+}
+
+.add-book {
+    color:#9b786f;
+    text-decoration: none;
+
+
+}
+
+.add-book:hover {
+    color:#46344E;
+
 }

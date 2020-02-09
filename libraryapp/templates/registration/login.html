@@ -3,6 +3,8 @@
 
 {% block css %}
     <link rel="stylesheet" href="{% static 'styles/base.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/libraries.css' %}" />
+
 {% endblock %}
  <nav id="logout-nav site-nav">
         <ol class="navList">
@@ -10,10 +12,14 @@
         </ol>
     </nav>
 <section class="login-form">
-<h2 class="login-title">Login</h2>
+    <h1 class="welcome-message-login">Welcome to the Nashville Library Management System</h1>
+        <span class="book-img-container">
+        <img src="https://www.goodfreephotos.com/albums/vector-images/old-book-vector-clipart.png" width="350"></img>
+{% comment %} <h2 class="login-title">Login</h2> {% endcomment %}
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button class="login-button" type="submit">Login</button>
+        </span>
 </form>
 </section>

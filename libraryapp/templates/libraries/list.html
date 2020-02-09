@@ -11,11 +11,11 @@
 
     <ol>
     {% for library in all_libraries %}
-        <li>
+        <li class="library-list-entry">
             <a href="{% url 'libraryapp:library' library.id %}">
                 {{ library.title }}
             </a>
-            ({{ library.address }})
+             ({{ library.address }})
             <ul>
             {% for book in library.books %}
                 <li>{{ book.title }}</li>

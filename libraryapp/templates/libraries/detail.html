@@ -1,7 +1,12 @@
 {% extends 'shared/base.html' %}
+{% load static %}
 
+{% block css %}
+    <link rel="stylesheet" href="{% static 'styles/libraries.css' %}" />
+{% endblock %}
 {% block content %}
-    <h1>{{ library.title }}</h1>
+<section class="library-detail-container">
+    <h1 class="library-detail-title">{{ library.title }}</h1>
     <div>Address: {{ library.address }}</div>
-
+</section>
 {% endblock %}

@@ -1,8 +1,12 @@
 {% extends 'shared/base.html' %}
+{% load static %}
 
+{% block css %}
+    <link rel="stylesheet" href="{% static 'styles/books.css' %}" />
+{% endblock %}
 {% block content %}
-
-<h1>Inventory Book</h1>
+<section class="book-form-container">
+<h1 class="book__detail__title">Inventory Book</h1>
 
     {% if book.id is not None %}
         <form action="{% url 'libraryapp:book' book.id %}" method="post">
@@ -38,12 +42,14 @@
 
         {% if book.id is not None %}
             <input type="hidden" name="actual_method" value="PUT">
-            <input type="submit" value="Update" />
+            <input class="book-form-button" type="submit" value="Update" />
         {% else %}
-            <input type="submit" value="Create" />
+            <input class="book-form-button" type="submit" value="Create" />
         {% endif %}
 
     </form>
+
+    </section>
 
 {% endblock %}
 

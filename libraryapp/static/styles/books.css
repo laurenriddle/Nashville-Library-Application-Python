@@ -123,3 +123,42 @@ body {
     border-radius: 10px;
     margin: 3px;
 }
+
+/* book inventory and creation form */
+
+.book-form-container {
+    background-color: #46344E;
+    border-radius: 20px;
+    color: white;
+    padding: 0 2em 0.5em 2em;
+    padding: 1.5em;
+    border: 1px solid gray;
+    margin: 1em;
+}
+
+.book-form-button {
+    background-color: #5a5560;
+    color: white;
+    font-size: medium;
+    font-family: 'Courier Prime', monospace;
+    border-radius: 10px;
+    margin: 3px;
+}
+
+fieldset {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#title, #author, #year_published, #ISBN, #location {
+    font-size: 20px;
+    background-color: #5a5560;
+    color: white;
+    font-family: 'Courier Prime', monospace;
+
+}
+
+.book-form-container label {
+    font-family: 'Courier Prime', monospace;
+
+}

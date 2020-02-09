@@ -1,7 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Courier+Prime&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Courier+Prime|Roboto:700&display=swap');
+
+/* librarian list styles */
 .librarian-title {
     color:#9b786f;
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: 3em;
+}
+
+.librarian-name a{
+    color:#FAED26;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+
+}
+
+.librarian-list {
+    background-color: #46344E;
+    border-radius: 20px;
+    color: white;
+    padding: 0 2em 0.5em 2em;
+    padding: 1.5em;
+    border: 1px solid gray;
+    margin: 1em;
+}
+
+
+/* librarian details styles */
+.librarian-details-container {
+    background-color: #46344E;
+    border-radius: 20px;
+    color: white;
+    padding: 0 2em 0.5em 2em;
+    padding: 1.5em;
+    border: 1px solid gray;
+    margin: 1em;
+    font-family: 'Courier Prime', monospace;
+
+}
+
+.librarian-details-name {
+    color:#FAED26;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
 }

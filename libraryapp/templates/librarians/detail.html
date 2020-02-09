@@ -1,9 +1,14 @@
 {% extends 'shared/base.html' %}
+{% load static %}
 
+{% block css %}
+    <link rel="stylesheet" href="{% static 'styles/librarians.css' %}" />
+{% endblock %}
 {% block content %}
-
-    <h1>{{ librarian.first_name }} {{librarian.last_name}}</h1>
-    <h2>Library: {{ librarian.title }}</h2>
+    <section class="librarian-details-container">
+    <h1 class="librarian-details-name">{{ librarian.first_name }} {{librarian.last_name}}</h1>
+    <div>Library: {{ librarian.title }}</div>
 
     <div>Address: {{ librarian.address }}</div>
+    </section>
 {% endblock %}

@@ -6,14 +6,14 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Books</h1>
+    <h1 class="books-title">Books</h1><hr/>
 
     <dialog class="infoDialog">
         <div class="infoDialog__message"></div>
         <button class="closeDialog">Close</button>
     </dialog>
 
-    <a href="{% url 'libraryapp:book_form' %}">Add Book to Inventory</a>
+    <a class="add-book" href="{% url 'libraryapp:book_form' %}">Add Book to Inventory</a>
 
     <ol class="books">
     {% for book in all_books %}

@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
     <nav id="site-nav">
         <ol class="navList">
             <li class="navList__route"><a href="{% url 'libraryapp:home' %}">Home</a></li>
@@ -23,6 +22,7 @@
             <li class="navList__route"><a href="{% url 'libraryapp:logout' %}">Logout</a></li>
         </ol>
     </nav>
+
 
     <main class="main-content">
         {% block content %}

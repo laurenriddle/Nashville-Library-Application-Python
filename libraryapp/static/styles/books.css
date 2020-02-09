@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Courier+Prime&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Courier+Prime|Roboto:700&display=swap');
+/* books list styles */
 .books {
     list-style: none;
     display: flex;
@@ -11,12 +14,151 @@
     border: 1px solid gray;
     margin: 1em;
     padding: 1.5em;
+    background-color: #46344E;
+    /* color: #FAED26; */
+    border-radius: 20px;
+    color: white;
 }
 
 .book__title {
     font-size: 1.1em;
+    color:#FAED26;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+}
+
+.book__title:hover {
+    font-size: 1.1em;
+    color:rgba(250, 236, 38, 0.836);
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
 }
 
 .book__description {
     font-size: 0.75em;
+    font-family: 'Courier Prime', monospace;
+
+}
+.book > button {
+    /* background-color: #9b786f; */
+    background-color: #5a5560;
+    color: white;
+    /* width: 30%; */
+    /* height: 20%; */
+    font-size: medium;
+    font-family: 'Courier Prime', monospace;
+    border-radius: 10px;
+}
+
+
+
+.books-title {
+    color:#9b786f;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+}
+body {
+    background-color: rgba(241, 241, 241, 0.76);
+
+}
+
+
+.add-book {
+    color:#9b786f;
+    text-decoration: none;
+}
+
+.add-book:hover {
+    color:#46344E;
+
+}
+
+.infoDialog {
+    background-color: #46344E;
+    color: white;
+    font-family: 'Courier Prime', monospace;
+
+}
+
+.closeDialog {
+    background-color: #5a5560;
+    color: white;
+    font-size: medium;
+    font-family: 'Courier Prime', monospace;
+    border-radius: 10px; 
+}
+
+
+
+/* Book details styles */
+
+.book__detail__title {
+    color:#FAED26;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder; 
+}
+
+.book__details__content {
+    font-family: 'Courier Prime', monospace;
+    color: white;
+}
+
+
+#book-details {
+    background-color: #46344E;
+    border-radius: 20px;
+    color: white;
+    padding: 0 2em 0.5em 2em;
+    padding: 1.5em;
+    border: 1px solid gray;
+    margin: 1em;
+}
+
+#book-actions button {
+    background-color: #5a5560;
+    color: white;
+    font-size: medium;
+    font-family: 'Courier Prime', monospace;
+    border-radius: 10px;
+    margin: 3px;
+}
+
+/* book inventory and creation form */
+
+.book-form-container {
+    background-color: #46344E;
+    border-radius: 20px;
+    color: white;
+    padding: 0 2em 0.5em 2em;
+    padding: 1.5em;
+    border: 1px solid gray;
+    margin: 1em;
+}
+
+.book-form-button {
+    background-color: #5a5560;
+    color: white;
+    font-size: medium;
+    font-family: 'Courier Prime', monospace;
+    border-radius: 10px;
+    margin: 3px;
+}
+
+fieldset {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#title, #author, #year_published, #ISBN, #location {
+    font-size: 20px;
+    background-color: #5a5560;
+    color: white;
+    font-family: 'Courier Prime', monospace;
+
+}
+
+.book-form-container label {
+    font-family: 'Courier Prime', monospace;
+
 }

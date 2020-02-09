@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Courier+Prime&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Courier+Prime|Roboto:700&display=swap');
+
+/* library list styles */
+.library-title {
+    color:#9b786f;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+}
+
+.add-library {
+    color:#9b786f;
+    text-decoration: none;
+}
+
+.add-library:hover {
+    color:#46344E;
+
+}
+
+
+.library-list-entry {
+    background-color: #46344E;
+    border-radius: 20px;
+    color: white;
+    padding: 0 2em 0.5em 2em;
+    padding: 1.5em;
+    border: 1px solid gray;
+    margin: 1em;
+    font-family: 'Courier Prime', monospace;
+    
+}
+
+.library-list-entry a {
+    color: #FAED26;
+    font-family: 'Roboto', sans-serif;
+    
+    
+}
+/* home page styles */
+.welcome-message {
+    color:#9b786f;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.book-img-container {
+    text-align: center;
+    display: block;
+
+}
+.home-container {
+    background-color: #46344E;
+    border-radius: 20px;
+    color: white;
+    padding: 0 2em 0.5em 2em;
+    padding: 1.5em;
+    border: 1px solid gray;
+    margin: 1em;
+    font-family: 'Courier Prime', monospace;
+
+}
+/* library creation form */
+.library-form-container {
+    background-color: #46344E;
+    border-radius: 20px;
+    color: white;
+    padding: 0 2em 0.5em 2em;
+    padding: 1.5em;
+    border: 1px solid gray;
+    margin: 1em;
+}
+
+.library-form-button {
+    background-color: #5a5560;
+    color: white;
+    font-size: medium;
+    font-family: 'Courier Prime', monospace;
+    border-radius: 10px;
+    margin: 3px;
+}
+
+fieldset {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#title, #address {
+    font-size: 20px;
+    background-color: #5a5560;
+    color: white;
+    font-family: 'Courier Prime', monospace;
+
+}
+
+.library-form-container label {
+    font-family: 'Courier Prime', monospace;
+
+}
+
+.library__title {
+    color:#FAED26;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+}
+
+
+/* library details page */
+.library-detail-container {
+    background-color: #46344E;
+    border-radius: 20px;
+    color: white;
+    padding: 0 2em 0.5em 2em;
+    padding: 1.5em;
+    border: 1px solid gray;
+    margin: 1em;
+    font-family: 'Courier Prime', monospace;
+
+}
+.library-detail-title {
+    color:#FAED26;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+}

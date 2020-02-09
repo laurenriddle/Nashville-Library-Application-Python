@@ -1,3 +1,13 @@
+{% extends 'shared/base.html' %}
+
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'styles/libraries.css' %}" />
+        <link rel="stylesheet" href="{% static 'styles/base.css' %}" />
+
+{% endblock %}
+{% block content %}
 <!DOCTYPE html>
 <html>
 
@@ -7,9 +17,19 @@
 </head>
 
 <body>
-
-    <h1>Welcome to the Nashville Library Management System</h1>
-
+ {% comment %} <nav id="logout-nav site-nav">
+            <ol class="navList">
+            <li class="navList__route"><a href="{% url 'libraryapp:home' %}">Home</a></li>
+            <li class="navList__route"><a href="{% url 'libraryapp:login' %}">Login</a></li>
+        </ol>
+    </nav> {% endcomment %}
+    <section class="home-container">
+        <h1 class="welcome-message">Welcome to the Nashville Library Management System</h1>
+        <span class="book-img-container">
+        <img src="https://www.goodfreephotos.com/albums/vector-images/old-book-vector-clipart.png" width="600"></img>
+        </span>
+    </section>
 </body>
 
 </html>
+{% endblock %}

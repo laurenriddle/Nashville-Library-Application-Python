@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Courier+Prime&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Courier+Prime|Roboto:700&display=swap');
 body {
     margin: 0;
     padding: 0;
@@ -8,15 +10,68 @@ body {
 .main-content {
     padding: 1em 2em;
 }
-
+/* navbar styles */
 .navList {
     list-style-type: none;
     display: flex;
     border: 1px solid lightgray;
     padding: 1em;
     margin: 0;
+    background-color: #605d63bd;
 }
 
 .navList__route {
     margin: 0 0.5em;
+}
+
+
+#site-nav {
+    background-color: #605d63bd;
+    
+}
+.navList__route a{
+    color:#FAED26;
+    /* color: white; */
+    text-decoration: none;
+    border-radius: 20px;
+    padding: .5em;
+    margin: 1em;
+    text-align: center;
+    font-family: 'Courier Prime', monospace;
+
+}
+
+/* login page styles */
+.login-form {
+    background-color: #46344E;
+    border-radius: 20px;
+    color: white;
+    padding: 0 2em 0.5em 2em;
+    padding: 1.5em;
+    border: 1px solid gray;
+    margin: 1em;
+    font-family: 'Courier Prime', monospace;
+}
+
+.login-title {
+    color:#FAED26;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+}
+
+.login-button {
+    background-color: #5a5560;
+    color: white;
+    font-size: medium;
+    font-family: 'Courier Prime', monospace;
+    border-radius: 10px;
+    margin: 3px;
+}
+
+input {
+    font-size: 20px;
+    background-color: #5a5560;
+    color: white;
+    font-family: 'Courier Prime', monospace;
+
 }

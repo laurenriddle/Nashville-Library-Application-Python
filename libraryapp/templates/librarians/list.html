@@ -1,15 +1,20 @@
 {% extends 'shared/base.html' %}
+{% load static %}
 
+{% block css %}
+    <link rel="stylesheet" href="{% static 'styles/librarians.css' %}" />
+{% endblock %}
 {% block content %}
-    <h1>Librarians</h1>
-
+    <h1 class="librarian-title">Librarians</h1><hr/>
+<section class="librarian-list">
     <ol>
     {% for librarian in all_librarians %}
-        <li>
+        <li class="librarian-name">
          <a href="{% url 'libraryapp:librarian' librarian.id %}"> {{ librarian.first_name }} {{ librarian.last_name }} </a>
         </li>
         
     {% endfor %}
     </ol>
+    </section>
 
 {% endblock %}

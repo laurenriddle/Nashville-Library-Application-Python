@@ -18,7 +18,9 @@
              ({{ library.address }})
             <ul>
             {% for book in library.books %}
-                <li>{{ book.title }}</li>
+                {% if book.title != null %}
+                    <li>{{ book.title }}</li>
+                {% endif %}
             {% endfor %}
             </ul>
         </li>

@@ -45,7 +45,7 @@ def library_list(request):
                     b.year_published,
                     b.isbn
                 FROM libraryapp_library li
-                JOIN libraryapp_book b ON li.id = b.location_id
+                LEFT JOIN libraryapp_book b ON li.id = b.location_id
             """)
 
             libraries = db_cursor.fetchall()
@@ -58,17 +58,14 @@ def library_list(request):
                 # If the dictionary does have a key of the current
                 # library's `id` value, add the key and set the value
                 # to the current library
-                print(library, book)
+                print(library)
                 if library.id not in library_groups:
                     library_groups[library.id] = library
                     library_groups[library.id].books.append(book)
-                    print(library_groups[library.id].books)
                 # If the key does exist, just append the current
                 # book to the list of books for the current library
                 else:
                     library_groups[library.id].books.append(book)
-                print(library_groups)
-            print("PLEASE", library_groups)
             template = 'libraries/list.html'
             context = {
                 'all_libraries': library_groups.values()

@@ -1,5 +1,6 @@
 from django.db import models
 
+# this is a class to create a template for all libraries that will be returned via SQL queries
 
 class Library(models.Model):
 

@@ -34,6 +34,7 @@ def book_list(request):
         }
 
         return render(request, template, context)
+
     elif request.method == 'POST':
         form_data = request.POST
 
@@ -46,7 +47,7 @@ def book_list(request):
                 title, author, ISBN,
                 year_published, librarian_id, location_id 
             )
-            VALUES (?, ?, ?, ?, ?, ?)
+            VALUES (?, ?, ?, ?, ?, ?) 
             """,
             (form_data['title'], form_data['author'],
                 form_data['ISBN'], form_data['year_published'],

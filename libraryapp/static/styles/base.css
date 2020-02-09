@@ -53,10 +53,14 @@ body {
     font-family: 'Courier Prime', monospace;
 }
 
-.login-title {
+.login-title, .welcome-message-login {
+    text-align: center;
     color:#FAED26;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Courier Prime', monospace;
+
     font-weight: bolder;
+    font-size: 40px;
 }
 
 .login-button {
@@ -75,3 +79,4 @@ input {
     font-family: 'Courier Prime', monospace;
 
 }
+

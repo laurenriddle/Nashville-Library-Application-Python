@@ -12,7 +12,7 @@ def get_librarian(librarian_id):
         conn.row_factory = model_factory(Librarian)
         db_cursor = conn.cursor()
 
-        db_cursor.execute("""
+        db_cursor.execute(f"""
         select
         lb.id,
         lb.location_id,
@@ -25,6 +25,8 @@ def get_librarian(librarian_id):
         from libraryapp_librarian lb
         join auth_user au on lb.user_id = au.id
         JOIN libraryapp_library l ON lb.location_id = l.id
+        where lb.id = {librarian_id}
+
         """)
 
         return db_cursor.fetchone()

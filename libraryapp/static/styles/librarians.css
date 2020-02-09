@@ -13,7 +13,7 @@
     color:#FAED26;
     font-family: 'Roboto', sans-serif;
     font-weight: bolder;
-
+    
 }
 
 .librarian-list {
@@ -24,8 +24,12 @@
     padding: 1.5em;
     border: 1px solid gray;
     margin: 1em;
+    
 }
+.librarian-ul {
+    list-style-type: none;
 
+}
 
 /* librarian details styles */
 .librarian-details-container {

@@ -9,7 +9,7 @@ from .details import get_book
 
 
 
-def get_libraries():
+def get_libraries(): # gets libraries for form dropdown
     with sqlite3.connect(Connection.db_path) as conn:
         conn.row_factory = model_factory(Library)
         db_cursor = conn.cursor()
@@ -33,7 +33,7 @@ def book_form(request):
             'all_libraries': libraries
         }
 
-        return render(request, template, context)
+        return render(request, template, context) # renders the book form and passes the libraries, template, and context to it
 
 @login_required
 def book_edit_form(request, book_id):
@@ -48,4 +48,4 @@ def book_edit_form(request, book_id):
             'all_libraries': libraries
         }
 
-        return render(request, template, context)
+        return render(request, template, context) # renders the book form and passes the libraries, template, and context to it

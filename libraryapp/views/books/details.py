@@ -6,10 +6,33 @@ from libraryapp.models import Book, Library, Librarian
 from libraryapp.models import model_factory
 from ..connection import Connection
 
+def create_book(cursor, row):
+    _row = sqlite3.Row(cursor, row)
 
+    book = Book()
+    book.id = _row["book_id"]
+    book.author = _row["author"]
+    book.ISBN = _row["ISBN"]
+    book.title = _row["title"]
+    book.year_published = _row["year_published"]
+
+    librarian = Librarian()
+    librarian.id = _row["librarian_id"]
+    librarian.first_name = _row["first_name"]
+    librarian.last_name = _row["last_name"]
+
+    library = Library()
+    library.id = _row["library_id"]
+    library.title = _row["library_name"]
+
+    book.librarian = librarian
+    book.location = library
+
+    return book
+# this function gets the single book
 def get_book(book_id):
     with sqlite3.connect(Connection.db_path) as conn:
-        conn.row_factory = create_book
+        conn.row_factory = create_book # calls the create book function above to format the book data
         db_cursor = conn.cursor()
 
         db_cursor.execute("""
@@ -38,7 +61,7 @@ def get_book(book_id):
 @login_required
 def book_details(request, book_id):
     if request.method == 'GET':
-        book = get_book(book_id)
+        book = get_book(book_id) 
         template_name = 'books/detail.html'
         return render(request, template_name, {'book': book})
 
@@ -67,8 +90,8 @@ def book_details(request, book_id):
                     form_data['ISBN'], form_data['year_published'],
                     form_data["location"], book_id,
                 ))
-
-            return redirect(reverse('libraryapp:books'))
+            
+            return redirect(reverse('libraryapp:books')) # redirects you to books
 
         # Check if this POST is for deleting a book
         if (
@@ -83,27 +106,4 @@ def book_details(request, book_id):
                     WHERE id = ?
                 """, (book_id,))
 
-            return redirect(reverse('libraryapp:books'))
-def create_book(cursor, row):
-    _row = sqlite3.Row(cursor, row)
-
-    book = Book()
-    book.id = _row["book_id"]
-    book.author = _row["author"]
-    book.ISBN = _row["ISBN"]
-    book.title = _row["title"]
-    book.year_published = _row["year_published"]
-
-    librarian = Librarian()
-    librarian.id = _row["librarian_id"]
-    librarian.first_name = _row["first_name"]
-    librarian.last_name = _row["last_name"]
-
-    library = Library()
-    library.id = _row["library_id"]
-    library.title = _row["library_name"]
-
-    book.librarian = librarian
-    book.location = library
-
-    return book
+            return redirect(reverse('libraryapp:books')) # redirects you to books

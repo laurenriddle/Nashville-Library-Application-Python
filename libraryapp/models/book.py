@@ -2,7 +2,7 @@ from django.db import models
 from .librarian import Librarian
 from .library import Library
 
-
+# this is a class to create a template for all books that will be returned via SQL queries
 class Book(models.Model):
 
     title = models.CharField(max_length = 50)

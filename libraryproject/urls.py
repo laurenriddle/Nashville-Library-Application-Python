@@ -20,5 +20,6 @@ from libraryapp.models import *
 
 urlpatterns = [
     path('admin/', admin.site.urls, name="login"),
+    # the path below redirects all urls inputed by the user to the libraryapp/urls.py file except the login URL which is handled above
     path('', include('libraryapp.urls')),
 ]

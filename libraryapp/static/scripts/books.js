@@ -1,3 +1,4 @@
+// this JS handle the function that presents the book ID when the user clicks details on a book
 const infoDialog = document.querySelector(".infoDialog")
 const message = document.querySelector(".infoDialog__message")
 const closeDialog = document.querySelector(".closeDialog")

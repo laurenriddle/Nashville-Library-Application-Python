@@ -19,6 +19,6 @@ from django.urls import path
 from libraryapp.models import *
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls, name="login"),
     path('', include('libraryapp.urls')),
 ]

@@ -4,6 +4,8 @@
 
 {% block css %}
     <link rel="stylesheet" href="{% static 'styles/libraries.css' %}" />
+        <link rel="stylesheet" href="{% static 'styles/base.css' %}" />
+
 {% endblock %}
 {% block content %}
 <!DOCTYPE html>
@@ -15,6 +17,12 @@
 </head>
 
 <body>
+ {% comment %} <nav id="logout-nav site-nav">
+            <ol class="navList">
+            <li class="navList__route"><a href="{% url 'libraryapp:home' %}">Home</a></li>
+            <li class="navList__route"><a href="{% url 'libraryapp:login' %}">Login</a></li>
+        </ol>
+    </nav> {% endcomment %}
     <section class="home-container">
         <h1 class="welcome-message">Welcome to the Nashville Library Management System</h1>
         <span class="book-img-container">

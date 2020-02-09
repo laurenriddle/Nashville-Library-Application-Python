@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Courier+Prime&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Courier+Prime|Roboto:700&display=swap');
+/* books list styles */
 .books {
     list-style: none;
     display: flex;
@@ -49,6 +50,8 @@
     border-radius: 10px;
 }
 
+
+
 .books-title {
     color:#9b786f;
     text-align: center;
@@ -84,4 +87,39 @@ body {
     font-size: medium;
     font-family: 'Courier Prime', monospace;
     border-radius: 10px; 
+}
+
+
+
+/* Book details styles */
+
+.book__detail__title {
+    color:#FAED26;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder; 
+}
+
+.book__details__content {
+    font-family: 'Courier Prime', monospace;
+    color: white;
+}
+
+
+#book-details {
+    background-color: #46344E;
+    border-radius: 20px;
+    color: white;
+    padding: 0 2em 0.5em 2em;
+    padding: 1.5em;
+    border: 1px solid gray;
+    margin: 1em;
+}
+
+#book-actions button {
+    background-color: #5a5560;
+    color: white;
+    font-size: medium;
+    font-family: 'Courier Prime', monospace;
+    border-radius: 10px;
+    margin: 3px;
 }

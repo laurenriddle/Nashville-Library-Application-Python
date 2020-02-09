@@ -7,14 +7,14 @@
 {% block content %}
     <h1 class="librarian-title">Librarians</h1><hr/>
 <section class="librarian-list">
-    <ol>
+    <ul class="librarian-ul">
     {% for librarian in all_librarians %}
         <li class="librarian-name">
          <a href="{% url 'libraryapp:librarian' librarian.id %}"> {{ librarian.first_name }} {{ librarian.last_name }} </a>
         </li>
         
     {% endfor %}
-    </ol>
+    </ul>
     </section>
 
 {% endblock %}

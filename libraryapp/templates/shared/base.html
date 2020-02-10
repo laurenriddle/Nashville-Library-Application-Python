@@ -14,13 +14,20 @@
 </head>
 
 <body>
+{% comment %} <div class="topnav" id="myTopnav">
+  <a href="#home" class="active">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div> {% endcomment %}
     <nav id="site-nav">
         <ol class="navList">
-            <li class="navList__route"><a href="{% url 'libraryapp:home' %}">Home</a></li>
-            <li class="navList__route"><a href="{% url 'libraryapp:libraries' %}">Libraries</a></li>
-            <li class="navList__route"><a href="{% url 'libraryapp:books' %}">Books</a></li>
-            <li class="navList__route"><a href="{% url 'libraryapp:librarians' %}">Librarians</a></li>
-            <li class="navList__route"><a href="{% url 'libraryapp:logout' %}">Logout</a></li>
+            <li class="navList__route"><a href="{% url 'libraryapp:home' %}" class="nav-link">Home</a></li>
+            <li class="navList__route"><a href="{% url 'libraryapp:libraries' %}" class="nav-link">Libraries</a></li>
+            <li class="navList__route"><a href="{% url 'libraryapp:books' %}" class="nav-link">Books</a></li>
+            <li class="navList__route"><a href="{% url 'libraryapp:librarians' %}" class="nav-link">Librarians</a></li>
+            <li class="navList__route"><a href="{% url 'libraryapp:logout' %}" class="nav-link">Logout</a></li>
         </ol>
     </nav>
 
@@ -31,7 +38,18 @@
     </main>
 
     {% block scripts %}
+    <script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
     {% endblock scripts %}
+
 </body>
 
 </html>
